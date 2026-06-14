@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-display: "Poppins";
+    --font-body: "Poppins";
+    --font-mono: "monospace";
+    --radius: 0.75rem;
+
+    --background: 0.97 0.008 88;
+    --foreground: 0.18 0.025 45;
+    --card: 1.0 0.0 0;
+    --card-foreground: 0.18 0.025 45;
+    --popover: 1.0 0.0 0;
+    --popover-foreground: 0.18 0.025 45;
+
+    --primary: 0.48 0.16 145;
+    --primary-foreground: 0.99 0.002 145;
+
+    --secondary: 0.94 0.012 88;
+    --secondary-foreground: 0.25 0.025 45;
+    --muted: 0.94 0.012 88;
+    --muted-foreground: 0.48 0.02 60;
+
+    --accent: 0.72 0.19 55;
+    --accent-foreground: 0.18 0.025 45;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.005 25;
+
+    --border: 0.9 0.015 88;
+    --input: 0.9 0.015 88;
+    --ring: 0.48 0.16 145;
+
+    --chart-1: 0.55 0.18 150;
+    --chart-2: 0.65 0.22 40;
+    --chart-3: 0.45 0.15 85;
+    --chart-4: 0.6 0.16 200;
+    --chart-5: 0.52 0.14 120;
+
+    --sidebar: 0.96 0.01 80;
+    --sidebar-foreground: 0.2 0.02 50;
+    --sidebar-primary: 0.55 0.18 150;
+    --sidebar-primary-foreground: 0.98 0.005 150;
+    --sidebar-accent: 0.93 0.01 80;
+    --sidebar-accent-foreground: 0.3 0.02 50;
+    --sidebar-border: 0.88 0.015 80;
+    --sidebar-ring: 0.55 0.18 150;
+
+    --shadow-3d-sm: 0 4px 12px oklch(0.18 0.025 145 / 0.12);
+    --shadow-3d: 0 8px 32px oklch(0.18 0.025 145 / 0.15);
+    --shadow-3d-lg: 0 20px 60px oklch(0.18 0.025 145 / 0.2);
+    --shadow-warm: 0 8px 32px oklch(0.72 0.19 55 / 0.25);
+  }
+
+  .dark {
+    --background: 0.12 0.02 155;
+    --foreground: 0.93 0.01 88;
+    --card: 0.16 0.025 155;
+    --card-foreground: 0.93 0.01 88;
+    --popover: 0.16 0.025 155;
+    --popover-foreground: 0.93 0.01 88;
+
+    --primary: 0.68 0.18 145;
+    --primary-foreground: 0.12 0.02 155;
+
+    --secondary: 0.2 0.025 155;
+    --secondary-foreground: 0.8 0.01 88;
+    --muted: 0.2 0.025 155;
+    --muted-foreground: 0.52 0.015 88;
+
+    --accent: 0.78 0.2 55;
+    --accent-foreground: 0.12 0.02 55;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.13 0.018 40;
+
+    --border: 0.25 0.022 155;
+    --input: 0.25 0.022 155;
+    --ring: 0.68 0.18 145;
+
+    --chart-1: 0.72 0.2 155;
+    --chart-2: 0.72 0.2 40;
+    --chart-3: 0.65 0.18 85;
+    --chart-4: 0.75 0.18 200;
+    --chart-5: 0.7 0.16 120;
+
+    --sidebar: 0.17 0.022 155;
+    --sidebar-foreground: 0.92 0.01 150;
+    --sidebar-primary: 0.72 0.2 155;
+    --sidebar-primary-foreground: 0.13 0.018 155;
+    --sidebar-accent: 0.21 0.025 155;
+    --sidebar-accent-foreground: 0.82 0.01 150;
+    --sidebar-border: 0.26 0.022 155;
+    --sidebar-ring: 0.72 0.2 155;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .shadow-3d-sm {
+    box-shadow: var(--shadow-3d-sm);
+  }
+  .shadow-3d {
+    box-shadow: var(--shadow-3d);
+  }
+  .shadow-3d-lg {
+    box-shadow: var(--shadow-3d-lg);
+  }
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.shadow-warm-glow {
+  box-shadow: 0 0 20px oklch(0.72 0.19 55 / 0.35), var(--shadow-warm);
+}
+
+.shadow-subtle {
+  box-shadow: 0 1px 4px oklch(0.18 0.025 145 / 0.08);
+}

@@ -1,0 +1,3 @@
+[build]
+  command = "pnpm --filter @caffeine/template-frontend... run build"
+  publish = "src/frontend/dist"

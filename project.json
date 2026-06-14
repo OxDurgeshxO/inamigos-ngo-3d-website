@@ -1,0 +1,25 @@
+{
+  "overview": "InAmigos Foundation NGO homepage with stunning 3D interactive graphics using React Three Fiber.",
+  "features": [
+    "3D animated hero globe with parallax interaction",
+    "3D flip project cards for six initiatives",
+    "Trust badges with animated stat counters",
+    "Mobile-first responsive with 3D fallbacks",
+    "Sticky header with Donate and Volunteer CTAs",
+    "Six-project grid with hover 3D effects",
+    "Get Involved pathways for donors, volunteers, and interns",
+    "Success stories and comprehensive footer"
+  ],
+  "category": "landing-page",
+  "tags": [
+    "ngo",
+    "nonprofit",
+    "3d",
+    "webgl",
+    "react-three-fiber",
+    "homepage",
+    "india",
+    "charity"
+  ],
+  "last_updated": "2026-06-13T23:55:16.525Z"
+}
