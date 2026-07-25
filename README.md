@@ -1,25 +1,110 @@
-# 🌐 Inamigos NGO 3D Website
+# 🌍 iNamigos — 3D NGO Website
 
-Welcome to the **Inamigos NGO 3D Website** repository! This project aims to deliver a modern, interactive, and immersive 3D web experience for the Inamigos Foundation. Built within a robust TypeScript monorepo architecture, it leverages cutting-edge web technologies alongside decentralized backend capabilities to showcase the NGO's mission and impact.
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=threedotjs&logoColor=white)](https://threejs.org/)
+[![Netlify](https://img.shields.io/badge/Deployed_on-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white)](https://www.netlify.com/)
+[![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat&logo=pnpm&logoColor=white)](https://pnpm.io/)
+
+A visually immersive **3D website** built for the iNamigos NGO, combining cutting-edge Three.js 3D web experiences with a modern TypeScript frontend. The largest and most visually ambitious project in this portfolio at ~5.8 MB of assets and code.
+
+---
 
 ## ✨ Features
 
-- **Immersive 3D UI:** Engaging visualizations and interactive web elements designed to bring the NGO's initiatives to life.
-- **Scalable Monorepo Architecture:** Organized using `pnpm` workspaces for clean dependency management across multiple isolated packages.
-- **Decentralized Capabilities:** Integrates Motoko (`mops.toml`) for developing and deploying smart contracts/canisters on the Internet Computer (ICP).
-- **Automated CI/CD:** Ready for rapid iteration with a pre-configured `netlify.toml` for seamless, automated deployments on Netlify.
-- **Type-Safe Ecosystem:** Primarily written in TypeScript to ensure high maintainability, fewer runtime errors, and an excellent developer experience.
+- 🌐 **3D Interactive Experience** — Immersive Three.js-powered 3D scenes and animations
+- 📱 **Fully Responsive** — Works seamlessly across desktop and mobile
+- ⚡ **Netlify Deployed** — Production-ready with `netlify.toml` configuration
+- 🧩 **Monorepo Architecture** — Clean pnpm workspace structure
+- 🔒 **Type-safe** — Strict TypeScript throughout the codebase
+- 🎨 **NGO-focused Design** — Built to represent the iNamigos organization's mission
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Language:** TypeScript (94.6%), JavaScript, CSS
-- **Package Management:** [pnpm](https://pnpm.io/)
-- **Monorepo Tools:** `pnpm-workspace.yaml`, `project.json`
-- **Web3 Integration:** Motoko (managed via `mops`)
-- **Hosting & Deployment:** Netlify
-- **AI Tooling:** Caffeine AI configurations (`caffeine.toml`)
+| Layer | Technology |
+|-------|------------|
+| Language | TypeScript |
+| 3D Engine | Three.js / WebGL |
+| Frontend Framework | React + Next.js |
+| Styling | Tailwind CSS |
+| Package Manager | pnpm (workspaces) |
+| Deployment | Netlify |
+| Build Tool | Caffeine CLI |
 
+---
 
+## 📁 Project Structure
 
+```
+inamigos-ngo-3d-website/
+├── src/
+│   ├── frontend/        # React + Three.js 3D app
+│   └── backend/         # Backend services
+├── package.json         # Root workspace config
+├── pnpm-workspace.yaml  # pnpm monorepo config
+├── netlify.toml         # Netlify deployment config
+├── tsconfig.json        # TypeScript config
+├── caffeine.toml        # Caffeine project config
+└── DESIGN.md            # 3D design decisions & visual spec
+```
 
-WEBSITE DIRECT LINK ~~   https://inamigos-ngo-3d-website.netlify.app/
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 16.0.0
+- pnpm ≥ 7.0.0 (`npm install -g pnpm`)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/OxDurgeshxO/inamigos-ngo-3d-website.git
+cd inamigos-ngo-3d-website
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm -r run dev
+```
+
+### Build for Production
+
+```bash
+pnpm build
+```
+
+### Deploy to Netlify
+
+```bash
+# Automatically configured via netlify.toml
+netlify deploy --prod
+```
+
+---
+
+## 🌟 What is iNamigos?
+
+iNamigos is an NGO dedicated to community development and social impact. This website serves as their digital presence, built to engage visitors with an interactive 3D experience that communicates their mission powerfully.
+
+---
+
+## 📚 Design Documentation
+
+See [DESIGN.md](./DESIGN.md) for detailed information on the 3D visual design decisions, component architecture, and animation specifications.
+
+---
+
+## 👤 Author
+
+**Durgesh Dutt Sinha** — [@OxDurgeshxO](https://github.com/OxDurgeshxO)
+
+---
+
+## 📄 License
+
+MIT © [Durgesh Dutt Sinha](https://github.com/OxDurgeshxO)
