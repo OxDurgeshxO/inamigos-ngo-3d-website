@@ -1,5 +1,8 @@
 {
-  "name": "@caffeine/template-app",
+  "name": "inamigos-ngo-3d-website",
+  "version": "1.0.0",
+  "description": "3D interactive website for iNamigos NGO built with Three.js and TypeScript",
+  "homepage": "https://github.com/OxDurgeshxO/inamigos-ngo-3d-website",
   "type": "module",
   "engines": {
     "node": ">=16.0.0",
